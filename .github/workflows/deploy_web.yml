@@ -24,10 +24,10 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Setup Web App
+      - name: Setup and Build Web
         run: |
           flutter config --enable-web
-          flutter create . --platforms=web --project-name=cbse_math_app
+          flutter create . --platforms=web --org=com.cbsemath
           flutter pub get
           flutter build web --base-href "/CBSC-10th-math-app/" --release
 
