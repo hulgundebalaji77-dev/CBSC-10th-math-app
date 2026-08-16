@@ -31,7 +31,7 @@ jobs:
         run: flutter pub get
 
       - name: Build Web
-        run: flutter build web --base-href "/CBSC-10th-math-app/" --release
+        run: flutter build web --base-href "/CBSC-10th-math-app/" --web-renderer canvaskit --release
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
