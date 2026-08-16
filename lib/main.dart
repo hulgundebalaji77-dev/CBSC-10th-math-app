@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 import 'database_helper.dart';
 import 'solution_screen.dart';
 import 'formula_screen.dart';
 import 'quiz_screen.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: HomeScreen(),
@@ -37,7 +37,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                     icon: const Icon(Icons.menu_book, color: Colors.white),
                     label: const Text("Formulas", style: TextStyle(color: Colors.white)),
-                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FormulaScreen())),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const FormulaScreen()),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 10),
@@ -49,7 +52,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                     icon: const Icon(Icons.timer, color: Colors.white),
                     label: const Text("Practice Quiz", style: TextStyle(color: Colors.white)),
-                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const QuizScreen())),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const QuizScreen()),
+                    ),
                   ),
                 ),
               ],
